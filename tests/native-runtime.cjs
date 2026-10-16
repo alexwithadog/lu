@@ -1,0 +1,21 @@
+const { app, safeStorage } = require('electron');
+const assert = require('node:assert/strict');
+const path = require('node:path');
+const fs = require('node:fs/promises');
+const { randomUUID } = require('node:crypto');
+const directory = path.resolve(__dirname, '..', '.lu-test-data', 'native-runtime');
+app.setName('Lu runtime check');
+app.setPath('userData', directory);
+app.whenReady().then(async () => {
+  assert.equal(safeStorage.isEncryptionAvailable(), true, 'Windows credential encryption must be available');
+  const value = 'Lu generated test value ' + randomUUID();
+  const encrypted = safeStorage.encryptString(value);
+  assert.ok(!encrypted.toString('utf8').includes(value));
+  await fs.mkdir(directory, { recursive: true });
+  const file = path.join(directory, 'encrypted-test.bin');
+  await fs.writeFile(file, encrypted);
+  assert.equal(safeStorage.decryptString(await fs.readFile(file)), value);
+  await fs.unlink(file);
+  console.log('Lu Windows runtime: real credential encryption and decryption passed. No user keys were accessed.');
+  app.quit();
+}).catch(error => { console.error(error); app.exit(1); });

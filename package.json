@@ -1,0 +1,25 @@
+{
+  "name": "lu-companion",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Lu — a little presence, a little more possibility.",
+  "main": "desktop/main.cjs",
+  "author": "Lu",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 1420",
+    "build": "node scripts/build-speech.cjs && tsc --noEmit && vite build",
+    "start": "electron .",
+    "check": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "package": "pnpm build && node scripts/package.cjs"
+  },
+  "devDependencies": {
+    "@electron/packager": "^19.0.0",
+    "@types/node": "^24.0.0",
+    "electron": "44.7.2",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0"
+  }
+}

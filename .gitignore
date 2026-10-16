@@ -1,0 +1,23 @@
+node_modules/
+dist/
+release/
+.lu-test-data/
+.lu-data/
+.pnpm-store/
+.lu-package/
+desktop/Lu.Speech.exe
+desktop/Lu.Hook.exe
+*.log
+.env*
+!.env.example
+
+# Upstream research checkout and third-party reference media stay local.
+/coucou/
+/research/coucou-hub-reference.png
+
+# Runtime connection material and backups never belong in source control.
+agent-bridge.json
+credentials.json
+agent-preferences.json
+*.lu-backup-*
+*.lu-tmp

@@ -1,0 +1,51 @@
+{
+  "researchDate": "2026-10-14",
+  "status": "research-complete",
+  "nativeAppsTested": false,
+  "repositories": [
+    {
+      "repo": "Louis-CFM/coucou",
+      "revision": "1456bd3c87f91d6e267516203c84b0148b587120",
+      "localClone": "coucou",
+      "depth": "architecture and relevant implementation files"
+    },
+    {
+      "repo": "farion1231/cc-switch",
+      "revision": "51ac86f1c59abfefabadebd05ec5a5415b8ad72c",
+      "depth": "configuration, manuals, website demo, published screenshot"
+    },
+    {
+      "repo": "Anil-matcha/open-dots",
+      "revision": "9f2b473599865c0e42050ee681018f9134b26c7e",
+      "depth": "architecture, permission and local access services, frontend entry"
+    },
+    {
+      "repo": "openinterpreter/openinterpreter",
+      "revision": "ac1fcc8fe57aba51fcc3c79afd57a0883237fe87",
+      "depth": "README and protocol direction"
+    },
+    {
+      "repo": "openinterpreter/interpreter-workstation",
+      "revision": "62ff0a3982f92ba00a56649cfa0ced80658022ac",
+      "depth": "overlay architecture, window, context and approval implementation"
+    },
+    {
+      "repo": "ARITRA69/notch-911",
+      "revision": "37fd3d6808404e10a2f027d68685064a8cf208d8",
+      "depth": "README and permission policy"
+    }
+  ],
+  "excludedByUser": [
+    "MacPy"
+  ],
+  "primaryDocumentation": [
+    "https://v2.tauri.app/concept/architecture/",
+    "https://v2.tauri.app/reference/config/",
+    "https://v2.tauri.app/security/capabilities/",
+    "https://v2.tauri.app/develop/sidecar/",
+    "https://v2.tauri.app/plugin/updater/",
+    "https://learn.microsoft.com/en-us/windows/win32/winauto/uiauto-uiautomationoverview",
+    "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+    "https://agentclientprotocol.com/get-started/introduction"
+  ]
+}
